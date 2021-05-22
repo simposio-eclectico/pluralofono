@@ -1,0 +1,16 @@
+{
+  "name": "pluralofono",
+  "version": "0.0.2",
+  "description": "Instrumento virtual multiintérprete masivo",
+  "main": "websocket.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node websocket.js & npx http-server"
+  },
+  "author": "Simposio Ecléctico",
+  "license": "ISC",
+  "dependencies": {
+    "uuid": "^8.1.0",
+    "ws": "^7.3.0"
+  }
+}

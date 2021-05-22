@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pluralófono</title>
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div id="page-wrapper">
+      <nav id="aside" class="paper">
+        <h1>Pluralófono 🎹</h1>
+        <p>
+          Bienvenidx al Pluralófono v0.0.1. El Pluralófono es un
+          <strong>instrumento virtual</strong> pensado para ser
+          <strong>interpretado por múltiples entidades al mismo tiempo</strong>,
+          comunicadas a través de Internet. Este se puede componer de uno o más
+          instrumentos, de cualquier tipo, pero temporalmente sólo dispone de un
+          piano. <strong id="conectados"></strong>  Para empezar a escuchar y enviar sonidos, ingresa un
+          nombre de usuarix y has click en el botón <em>Conectar</em>.
+        </p>
+        <p>
+          <em>De todos modos, puedes tocar sin conectarte. ¿Qué tal probarlo con el Spotify abierto?</em> 😊
+        </p>
+        <div class="hide-xs">
+          <h2>🎵 TECLAS/NOTAS</h2>
+          <dl>
+            <dt><kbd>Q</kbd></dt><dd>DO / C</dd>
+            <dt><kbd>2</kbd></dt><dd>DO♯ / C♯</dd>
+            <dt><kbd>W</kbd></dt><dd>RE / D</dd>
+            <dt><kbd>3</kbd></dt><dd>RE♯ / D♯</dd>
+            <dt><kbd>E</kbd></dt><dd>MI / E</dd>
+            <dt><kbd>r</kbd></dt><dd>FA / F</dd>
+            <dt><kbd>5</kbd></dt><dd>FA♯ / F♯</dd>
+            <dt><kbd>T</kbd></dt><dd>SOL / G</dd>
+            <dt><kbd>6</kbd></dt><dd>SOL♯ / G♯</dd>
+            <dt><kbd>Y</kbd></dt><dd>LA / A</dd>
+            <dt><kbd>7</kbd></dt><dd>LA♯ / A♯</dd>
+            <dt><kbd>U</kbd></dt><dd>SI / B</dd>
+            <dt><kbd>I</kbd></dt><dd>DO / C</dd>
+          </dl>
+          <hr />
+          <h2>TECLAS ESPECIALES:</h2>
+          <p>👀 Ojo: Los efectos marcados con un signo de advertencia ⚠️ (como el Crescendo y otros), sólo tú los escucharás. <strong>🙉 El resto de la gente escuchará el sonido sin este efecto.</strong></p>
+          <dl>
+            <dt><kbd>Space</kbd></dt><dd>Corta todo sonido en caso de error (botón de pánico)</dd>
+            <dt><kbd>O</kbd></dt><dd>Subir una octava</dd>
+            <dt><kbd>K</kbd></dt><dd>Bajar una octava</dd>
+            <dt><kbd>C</kbd></dt><dd>Crescendo ⚠️</dd>
+            <dt><kbd>N</kbd></dt><dd>Pizzicato ⚠️</dd>
+            <dt><kbd>M</kbd></dt><dd>Sustain ⚠️</dd>
+            <dt><kbd>.</kbd></dt><dd>Cambiar sintetizador ⚠️</dd>
+          </dl>
+        </div>
+        <div id="status">Desconectado</div>
+        <input id="username" type="text" placeholder="Ingresa un nombre" />
+        <button type="button" id="toggle-connection">Conectar</button>
+        <hr />
+        <button type="button" id="toggle-color">Activar color</button>
+        <div id="special-key-status">[ ]</div>
+      </nav>
+
+      <div class="wood-wrapper hide-before-connect hide-xs">
+        <div class="paper user-list">
+          <dl id="usuarios"></dl>
+        </div>
+      </div>
+      <div id="piano" class="wood-wrapper">
+        <ul class="set">
+          <li data-tecla="q" data-note="C4" id="c" class="piano-btn white c"></li>
+          <li data-tecla="2" data-note="C#4" id="cs" class="piano-btn black cs"></li>
+          <li data-tecla="w" data-note="D4" id="d" class="piano-btn white d"></li>
+          <li data-tecla="3" data-note="D#4" id="ds" class="piano-btn black ds"></li>
+          <li data-tecla="e" data-note="E4" id="e" class="piano-btn white e"></li>
+          <li data-tecla="r" data-note="F4" id="f" class="piano-btn white f"></li>
+          <li data-tecla="5" data-note="F#4" id="fs" class="piano-btn black fs"></li>
+          <li data-tecla="t" data-note="G4" id="g" class="piano-btn white g"></li>
+          <li data-tecla="6" data-note="G#4" id="gs" class="piano-btn black gs"></li>
+          <li data-tecla="y" data-note="A4" id="a" class="piano-btn white a"></li>
+          <li data-tecla="7" data-note="A#4" id="as" class="piano-btn black as"></li>
+          <li data-tecla="u" data-note="B4" id="b" class="piano-btn white b"></li>
+        </ul>
+      </div>
+    </div>
+    <script type="module" src="interface.js"></script>
+  </body>
+</html>

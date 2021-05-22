@@ -1,0 +1,222 @@
+#messages {
+  font-size: 0.25em;
+}
+
+body {
+  background: #222;
+  font-family: Helvetica, sans-serif;
+  transition: background 1s;
+}
+
+.wood-wrapper {
+  height: 18.875em;
+  width: 34em;
+  margin: 5em auto;
+  padding: 2em 1em;
+  position: relative;
+  border: 1px solid #160801;
+  border-radius: 1em;
+  background: linear-gradient(
+      to bottom right,
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0)
+    ),
+    url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/187/vwood.png);
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5) inset,
+    0 1px rgba(212, 152, 125, 0.2) inset, 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+/************** PIANO *********/
+#piano {
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+  float: left;
+}
+
+ul .white {
+  height: 16em;
+  width: 4em;
+  z-index: 1;
+  border-left: 1px solid #bbb;
+  border-bottom: 1px solid #bbb;
+  border-radius: 0 0 5px 5px;
+  box-shadow: -1px 0 0 rgba(255, 255, 255, 0.8) inset, 0 0 5px #ccc inset,
+    0 0 3px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(to bottom, #eee 0%, #fff 100%);
+}
+
+ul .white:active {
+  border-top: 1px solid #777;
+  border-left: 1px solid #999;
+  border-bottom: 1px solid #999;
+  box-shadow: 2px 0 3px rgba(0, 0, 0, 0.1) inset,
+    -5px 5px 20px rgba(0, 0, 0, 0.2) inset, 0 0 3px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(to bottom, #fff 0%, #e9e9e9 100%);
+}
+
+.black {
+  height: 8em;
+  width: 2em;
+  margin: 0 0 0 -1em;
+  z-index: 2;
+  border: 1px solid #000;
+  border-radius: 0 0 3px 3px;
+  box-shadow: -1px -1px 2px rgba(255, 255, 255, 0.2) inset,
+    0 -5px 2px 3px rgba(0, 0, 0, 0.6) inset, 0 2px 4px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(45deg, #222 0%, #555 100%);
+}
+
+.black:active {
+  box-shadow: -1px -1px 2px rgba(255, 255, 255, 0.2) inset,
+    0 -2px 2px 3px rgba(0, 0, 0, 0.6) inset, 0 1px 2px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(to right, #444 0%, #222 100%);
+}
+
+.d,
+.e,
+.a,
+.g,
+.b {
+  margin: 0 0 0 -1em;
+}
+
+ul li:first-child {
+  border-radius: 5px 0 5px 5px;
+}
+
+ul li:last-child {
+  border-radius: 0 5px 5px 5px;
+}
+
+/************** MENU *********/
+nav#aside {
+  position: absolute;
+  width: 15%;
+  min-width: 200px;
+}
+
+.paper {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 1em;
+  border-radius: 1em;
+}
+
+/************** USER LIST *********/
+.user-list {
+  height: 300px;
+  overflow: overlay;
+}
+
+#status {
+  color: rgba(0, 0, 0, 0.8);
+  font-style: italic;
+}
+
+#username,
+#toggle-connection {
+  margin: 5px auto;
+  padding: 0.2em 0;
+  border-radius: 0.5em;
+  display: block;
+  width: 100%;
+}
+
+/* lista usuarios */
+#username dl {
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+}
+dt {
+  margin-right: 0.5em;
+  font-weight: bold;
+}
+dd {
+  margin: 0;
+}
+dt,
+dd {
+  display: inline;
+}
+dt:before {
+  content: "\A";
+  white-space: pre;
+}
+dt:first-child:before {
+  content: "";
+}
+
+/**************** KBD *********/
+kbd {
+  font-family: Consolas, "Lucida Console", monospace;
+  display: inline-block;
+  border-radius: 3px;
+  padding: 0px 4px;
+  box-shadow: 1px 1px 1px #777;
+  margin: 2px;
+  font-size: small;
+  vertical-align: text-bottom;
+  background: #eee;
+  font-weight: 500;
+  color: #555;
+  cursor: pointer;
+  font-variant: small-caps;
+  font-weight: 600;
+
+  /* This two work */
+  /* letter-spacing: 0.5px; */
+  letter-spacing: 1px;
+
+  /* Prevent selection */
+  user-select: none;
+}
+
+kbd:hover,
+kbd:hover * {
+  color: black;
+  /* box-shadow: 1px 1px 1px #333; */
+}
+kbd:active,
+kbd:active * {
+  color: black;
+  box-shadow: 1px 1px 0px #ddd inset;
+}
+
+kbd kbd {
+  padding: 0px;
+  margin: 0 1px;
+  box-shadow: 0px 0px 0px black;
+  vertical-align: baseline;
+  background: none;
+}
+
+kbd kbd:hover {
+  box-shadow: 0px 0px 0px black;
+}
+
+kbd:active kbd {
+  box-shadow: 0px 0px 0px black;
+  background: none;
+}
+
+/** ocultamientos **/
+.hide-before-connect {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .hide-xs {
+    display: none !important;
+  }
+
+  nav#aside {
+    position: relative;
+    width: 100%;
+  }
+}
