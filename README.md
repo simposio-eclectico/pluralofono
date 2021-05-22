@@ -1,8 +1,8 @@
 # Pluralófono 🎹🈚🌎
 
-Bienvenidx al Pluralófono v0.0.1.
+**Bienvenidxs al Pluralófono v0.0.1.**
 
-El Pluralófono es un instrumento virtual pensado para ser interpretado por múltiples entidades 🦊🤖🐻 al mismo tiempo, comunicadas a través de Internet. Este se puede componer de uno o más instrumentos, de cualquier tipo, pero temporalmente sólo dispone de un piano. 
+El Pluralófono es un **instrumento virtual** pensado para ser interpretado por **múltiples entidades** 🦊🤖🐻 al **mismo tiempo**, comunicadas a través de Internet. Este se puede componer de uno o más instrumentos, de cualquier tipo, pero temporalmente sólo dispone de un piano. 
 
 ## Funcionalidades
 
@@ -45,21 +45,21 @@ El proyecto se compone de un frontend HTML+JS+CSS, y un WebSocket hecho en node.
 ## TODO
 
 **Server:**
-- Permitir agregar nombres. SOK (falta verificar que nombre no exista en server)
-- Chekear conexiones muertas. SOK (implementación heartbeat no verificada)
-- Pasar a Elixir. NOK (posiblemente sea más rápido y escalable. Evaluar)
+- Permitir agregar nombres. 🙄 (falta verificar que nombre no exista en server)
+- Chekear conexiones muertas. 🙄 (implementación heartbeat no verificada)
+- Pasar a Elixir. ❌ (posiblemente sea más rápido y escalable. Evaluar)
 
 **Cliente:**
-- Permitir agregar nombres. OK
-- Crear teremin para celulares. NOK
-- Crear piano para escritorio. OK
-- Conexión MIDI. NOK
-- Arreglar diseño. SOK
-- Lista de usuarios con última nota ingresada. SOK
-- Permitir ocultar paneles flotantes
-- Permitir ocultar piano
-- Agregar más controles a piano (para celulares)
-- Mejorar diseño POR FAVOR
+- Permitir agregar nombres. ✔️
+- Crear teremin para celulares. ❌
+- Crear piano para escritorio. ✔️
+- Conexión MIDI. ❌
+- Arreglar diseño. 🙄
+- Lista de usuarios con última nota ingresada. ✔️
+- Permitir ocultar paneles flotantes ❌
+- Permitir ocultar piano ❌
+- Agregar más controles a piano (para celulares) ❌
+- Mejorar diseño POR FAVOR ❌
 
 ## Comandos
 ```
