@@ -2,20 +2,13 @@ const fs = require("fs");
 const https = require("https");
 const WebSocket = require("ws");
 const UUID = require("uuid");
+const PORT = 9876;
 
-const server = () => {
-  if (process.argv[2] === "prod") {
-    return new https.createServer({
-      port: 9876,
-      cert: fs.readFileSync("/etc/ssl/private/pluralofono.crt"),
-      key: fs.readFileSync("/etc/ssl/private/pluralofono.key"),
-    });
-  }
-  return {
-    port: 9876,
-  };
-};
-const wss = new WebSocket.Server(server());
+const server = new https.createServer({
+  cert: fs.readFileSync("/etc/ssl/private/pluralofono.crt"),
+  key: fs.readFileSync("/etc/ssl/private/pluralofono.key"),
+});
+const wss = new WebSocket.Server({ server });
 const ACTIVE_OSC = {};
 
 console.log("Server is running");
@@ -99,3 +92,5 @@ wss.on("connection", function connection(ws, req) {
     }
   }, 1000);
 });
+
+server.listen(PORT);
