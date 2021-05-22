@@ -7,8 +7,8 @@ const server = () => {
   if (process.argv[2] === "prod") {
     return new https.createServer({
       port: 9876,
-      cert: fs.readFileSync("/etc/ssl/private/pluralofono"),
-      key: fs.readFileSync("/etc/ssl/private/pluralofono"),
+      cert: fs.readFileSync("/etc/ssl/private/pluralofono.crt"),
+      key: fs.readFileSync("/etc/ssl/private/pluralofono.key"),
     });
   }
   return {
