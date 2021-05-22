@@ -56,6 +56,10 @@ El proyecto se compone de un frontend HTML+JS+CSS, y un WebSocket hecho en node.
 - Conexión MIDI. NOK
 - Arreglar diseño. SOK
 - Lista de usuarios con última nota ingresada. SOK
+- Permitir ocultar paneles flotantes
+- Permitir ocultar piano
+- Agregar más controles a piano (para celulares)
+- Mejorar diseño POR FAVOR
 
 ## Comandos
 ```
