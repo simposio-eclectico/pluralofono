@@ -2,9 +2,7 @@ import { routerMessage } from "./router.js";
 const SERVER_URL =
   location.hostname === "localhost" || location.hostname === "127.0.0.1"
     ? "ws://localhost:9876"
-    : "wss://104.248.48.75:9876";
-const socketStatus = document.getElementById("status");
-const btnToggle = document.getElementById("toggle-connection");
+    : "wss://ramosmerino.cl:9876";
 
 /**
  * Función CONNECT. Conecta al WS.
@@ -12,6 +10,8 @@ const btnToggle = document.getElementById("toggle-connection");
  */
 const connect = (username) => {
   const socket = new WebSocket(SERVER_URL + "?username=" + username);
+  const socketStatus = document.getElementById("status");
+  const btnToggle = document.getElementById("toggle-connection");
 
   /**
    * Handler de errores
