@@ -1,7 +1,21 @@
+const fs = require("fs");
+const https = require("https");
 const WebSocket = require("ws");
 const UUID = require("uuid");
 
-const wss = new WebSocket.Server({ port: 9876 });
+const server = () => {
+  if (process.argv[2] === "prod") {
+    return new https.createServer({
+      port: 9876,
+      cert: fs.readFileSync("/etc/ssl/private/pluralofono"),
+      key: fs.readFileSync("/etc/ssl/private/pluralofono"),
+    });
+  }
+  return {
+    port: 9876,
+  };
+};
+const wss = new WebSocket.Server(server());
 const ACTIVE_OSC = {};
 
 console.log("Server is running");
@@ -79,7 +93,9 @@ wss.on("connection", function connection(ws, req) {
 
   // Lista de clientes
   setInterval(() => {
-    console.log("sending broadcast");
-    wss.broadcast(JSON.stringify(ACTIVE_OSC));
+    if (Object.values(ACTIVE_OSC).length > 0) {
+      console.log("sending broadcast");
+      wss.broadcast(JSON.stringify(ACTIVE_OSC));
+    }
   }, 1000);
 });
