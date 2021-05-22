@@ -5,8 +5,8 @@ const UUID = require("uuid");
 const PORT = 9876;
 
 const server = new https.createServer({
-  cert: fs.readFileSync("/etc/ssl/private/pluralofono.crt"),
-  key: fs.readFileSync("/etc/ssl/private/pluralofono.key"),
+  cert: fs.readFileSync("/etc/letsencrypt/live/ramosmerino.cl/cert.pem"),
+  key: fs.readFileSync("/etc/letsencrypt/live/ramosmerino.cl/privkey.pem"),
 });
 const wss = new WebSocket.Server({ server });
 const ACTIVE_OSC = {};
