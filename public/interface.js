@@ -12,7 +12,10 @@ const txtUsername = document.getElementById("username");
 const strongSpecialKeyStatus = document.getElementById("special-key-status");
 const btnToggle = document.getElementById("toggle-connection");
 const btnToggleColor = document.getElementById("toggle-color");
-const userListContainer = document.getElementsByClassName("hide-before-connect")[0];
+const btnToggleNavbars = document.getElementById("toggle-navbars");
+const userListContainer = document.getElementsByClassName(
+  "hide-before-connect"
+)[0];
 
 const INITIAL_FADETIME = 0.5;
 const INITIAL_CRESCENDO = 0;
@@ -22,6 +25,7 @@ let crescendo = INITIAL_CRESCENDO;
 let factor = 1;
 let synth = INITIAL_SYNTH;
 let changeBackgroundColor = false;
+let hideNavbars = false;
 let socket; // Se define en la función connect
 
 // UTILIDADES
@@ -160,6 +164,9 @@ const handleKeyDownSpecialKeys = (key) => {
   if (key === " ") {
     strongSpecialKeyStatus.innerHTML = "Pánico";
     stopAll();
+  }
+  if (key === "a") {
+    changeBackgroundColor = !changeBackgroundColor;
   }
 
   strongSpecialKeyStatus.innerHTML = "[ ]";
@@ -309,6 +316,18 @@ window.onload = function () {
   btnToggleColor.onclick = function (e) {
     e.preventDefault();
     changeBackgroundColor = !changeBackgroundColor;
+  };
+
+  btnToggleNavbars.onclick = function (e) {
+    e.preventDefault();
+    hideNavbars = !hideNavbars;
+    if (hideNavbars) {
+      document.getElementById("aside").style.display = "none";
+      document.getElementById("info").style.display = "none";
+    } else {
+      document.getElementById("aside").style.display = "block";
+      document.getElementById("info").style.display = "block";
+    }
   };
 };
 

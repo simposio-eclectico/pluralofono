@@ -14,7 +14,7 @@ const FZ_TECLAS = {
   i: { key: "i", note: "C5", fz: 523 },
 };
 
-const isSpecialKey = (key) => [".", " ", "m", "n", "o", "k", "c"].includes(key);
+const isSpecialKey = (key) => [".", " ", "m", "n", "o", "k", "c", "a"].includes(key);
 
 const isPianoKey = (key) => Object.keys(FZ_TECLAS).includes(key);
 

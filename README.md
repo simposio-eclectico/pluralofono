@@ -28,6 +28,7 @@ Desde el momento que se abre la página web, ya se puede interpretar el piano in
 👀 Ojo: Los efectos marcados con un signo de advertencia ⚠️ (como el Crescendo y otros), sólo tú los escucharás. <strong>🙉 El resto de la gente escuchará el sonido sin este efecto.</strong>
 
 - <kbd>Space</kbd> - Corta todo sonido en caso de error (botón de pánico)</dd>
+- <kbd>A</kbd> - Activa/desactiva el color de fondo</dd>
 - <kbd>O</kbd> - Subir una octava</dd>
 - <kbd>K</kbd> - Bajar una octava</dd>
 - <kbd>C</kbd> - Crescendo ⚠️</dd>
@@ -60,6 +61,7 @@ El proyecto se compone de un frontend HTML+JS+CSS, y un WebSocket hecho en node.
 - Permitir ocultar piano ❌
 - Agregar más controles a piano (para celulares) ❌
 - Mejorar diseño POR FAVOR ❌
+- Activar hover de teclas en piano cuando se use teclado ❌
 
 ## Comandos
 ```
