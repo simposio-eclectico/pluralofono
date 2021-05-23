@@ -278,8 +278,10 @@ kbd:active kbd {
   }
 
   aside#info {
-    position: fixed;
-    width: 100%;
+    width: 85%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
   }
 
   aside#info > * {
