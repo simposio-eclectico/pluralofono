@@ -273,13 +273,22 @@ kbd:active kbd {
     display: none !important;
   }
 
+  nav#aside {
+    display: none !important;
+  }
+
   aside#info {
     position: fixed;
-    bottom: 0;
     width: 100%;
   }
 
+  aside#info > * {
+    text-align: center;
+    display: inline-block;
+  }
+
   button.big-button {
+    font-size: 1rem;
     padding: 0.5em 0.25em;
     border: 1px solid rgb(106, 163, 137);
     border-radius: 0.5em;
@@ -288,8 +297,5 @@ kbd:active kbd {
     transition: all 175ms cubic-bezier(0, 0, 1, 1);
   }
 
-  aside#info > * {
-    text-align: center;
-    display: inline-block;
-  }
+
 }
